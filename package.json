@@ -1,11 +1,15 @@
 {
-  "name": "scaffold",
+  "name": "scaffold-api",
   "version": "1.0.0",
   "description": "Scaffold CLI",
   "main": "build/index.js",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "test": "node --no-warnings --loader ts-node/esm src/index.ts"
+  },
+  "bin": {
+    "scaffold-api": "build/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +19,7 @@
     "name": "Igor Moura",
     "url": "https://github.com/igordmouraa"
   },
+  "keywords": ["cli", "scaffold", "api"],
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.4.1",
