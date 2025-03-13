@@ -1,5 +1,5 @@
 export interface Answers {
     name: string;
-    framework: "🌐 Express" | "🌐 Fastify";
-    database: "🗄️ MySQL" | "🐘 PostgresSQL" | "🌲 MongoDB";
+    framework: "express" | "fastify";
+    database: "mysql" | "postgres" | "mongo";
 }
