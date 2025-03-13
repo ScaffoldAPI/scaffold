@@ -9,18 +9,44 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function main() {
+    const questions = [
+        {
+            name: "name",
+            message: "Nome do projeto:",
+            default: "my-api"
+        },
+        {
+            type: "list",
+            name: "framework",
+            message: "Escolha o framework:",
+            choices: [
+                {name: "🌐 Express", value: "express"},
+                {name: "🌐 Fastify", value: "fastify"}
+            ]
+        },
+        {
+            type: "list",
+            name: "database",
+            message: "Escolha o banco de dados:",
+            choices: [
+                {name: "🗄️ MySQL", value: "mysql"},
+                {name: "🐘 PostgreSQL", value: "postgres"},
+                {name: "🌲 MongoDB", value: "mongo"}
+            ]
+        }
+    ];
+
+
     // @ts-ignore
-    const answers: Answers = await inquirer.prompt([
-        {name: "name", message: "Nome do projeto:", default: "my-api"},
-        {type: "list", name: "framework", message: "Escolha o framework:", choices: ["express", "fastify"]},
-        {type: "list", name: "database", message: "Escolha o banco de dados:", choices: ["mysql", "postgres", "mongo"]}
-    ]);
+    const answers = await inquirer.prompt<Answers>(questions);
 
     const projectPath = path.join(process.cwd(), answers.name);
-    const templatePath = path.join(__dirname, "templates", `${answers.framework}-${answers.database}`);
+
+    const templatePath = path.join(__dirname, "..", "templates", `${answers.framework}-${answers.database}`);
 
     if (!fs.existsSync(templatePath)) {
         console.error("Template não encontrado!");
+        console.log("Caminho do template:", templatePath);
         process.exit(1);
     }
 
