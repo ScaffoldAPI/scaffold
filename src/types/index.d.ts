@@ -3,3 +3,8 @@ export interface Answers {
     framework: "express" | "fastify";
     database: "mysql" | "postgres" | "mongo";
 }
+
+export interface MenuAnswers {
+    action: string;
+    language: string;
+}
