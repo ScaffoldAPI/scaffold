@@ -1,6 +1,6 @@
 {
   "name": "scaffold-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scaffold CLI",
   "main": "build/index.js",
   "type": "module",
