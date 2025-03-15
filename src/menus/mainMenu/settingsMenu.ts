@@ -14,7 +14,7 @@ export async function settingsMenu(lang: "pt-BR" | "en-US") {
                 value: "language"
             },
             {
-                name: ck.gray(t("back", lang)),
+                name: ck.redBright(t("back", lang)),
                 value: "back"
             }
         ]
@@ -24,10 +24,10 @@ export async function settingsMenu(lang: "pt-BR" | "en-US") {
     switch (menu) {
         case "language":
             const newLang = await changeLanguage(lang);
-            await settingsMenu(newLang); // Atualiza o idioma e volta ao menu de configurações
+            await settingsMenu(newLang);
             break;
         case "back":
-            await mainMenu(lang); // Volta ao menu principal
+            await mainMenu(lang);
             break;
     }
 }
@@ -45,7 +45,7 @@ async function changeLanguage(currentLang: "pt-BR" | "en-US") {
                 value: "en-US"
             },
             {
-                name: ck.gray(t("back", currentLang)),
+                name: ck.redBright(t("back", currentLang)),
                 value: "back"
             }
         ] as const,
@@ -53,9 +53,9 @@ async function changeLanguage(currentLang: "pt-BR" | "en-US") {
     divider();
 
     if (language === "back") {
-        return currentLang; // Mantém o idioma atual
+        return currentLang;
     } else {
         console.log(ck.green(`${t("languageChanged", currentLang)} ${language}`));
-        return language; // Retorna o novo idioma
+        return language;
     }
 }
