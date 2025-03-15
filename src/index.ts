@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { mainMenu } from "./menus/mainMenu/index.js";
 import ck from "chalk";
 
