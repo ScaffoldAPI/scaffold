@@ -19,7 +19,7 @@
 
     "types": ["node"],
     "allowJs": true,
-    "checkJs": false
+    "checkJs": false,
   },
   "ts-node": {
     "esm": true,
