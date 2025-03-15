@@ -2,7 +2,7 @@ import ck from "chalk";
 
 export const messages = {
     "en-US": {
-        mainMenuTitle: "⚙️ Scaffold CLI",
+        mainMenuTitle: "⚙️ Scaffold CLI 📦 1.1.3",
         createProject: "◈ Create API Project",
         settings: "☰ Settings",
         quit: "✕ Quit",
