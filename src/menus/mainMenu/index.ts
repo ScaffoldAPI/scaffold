@@ -28,14 +28,15 @@ export async function mainMenu(lang: "pt-BR" | "en-US" = "pt-BR") {
 
     switch (menu) {
         case "createProject":
-            await createProject(lang); // Cria o projeto com o idioma atual
-            await mainMenu(lang); // Volta ao menu principal
+            await createProject(lang);
+            await mainMenu(lang);
             break;
         case "settings":
-            await settingsMenu(lang); // Abre o menu de configurações
+            await settingsMenu(lang);
             break;
         case "quit":
-            console.log(ck.yellow("Até logo! 👋"));
+            console.log(ck.blueBright("🖥️ Github: "), ck.white("@igordmouraa"));
+            console.log(ck.yellow(t("byeMessage", lang)));
             process.exit(0);
     }
 }
