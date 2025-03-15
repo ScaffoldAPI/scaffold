@@ -2,13 +2,13 @@ import ck from "chalk";
 
 export const messages = {
     "en-US": {
-        mainMenuTitle: "❑ Scaffold CLI",
+        mainMenuTitle: "⚙️ Scaffold CLI",
         createProject: "◈ Create API Project",
         settings: "☰ Settings",
         quit: "✕ Quit",
         settingsTitle: "☰ Settings",
         language: "🌐 Language",
-        back: "← Back",
+        back: "⤶ Back",
         chooseLanguage: "🌐 Choose language",
         languageChanged: "Language changed to:",
         portuguese: "Portuguese (pt-BR)",
@@ -23,23 +23,24 @@ export const messages = {
         installingDeps: "Installing dependencies...",
         success: "Project created successfully! To start:",
         missingNpm: "npm is not installed!",
-        nodeVersion: "Node.js 18 or higher required!",
+        nodeVersion: "Node.js 20.11 or higher required!",
         yourVersion: "Your Node version:",
         operationCanceled: "Operation canceled by user",
-        templateNotFound: "Template not found:"
+        templateNotFound: "Template not found:",
+        byeMessage: "👋 Goodbye!"
     },
     "pt-BR": {
-        mainMenuTitle: "❑ Scaffold CLI",
+        mainMenuTitle: "⚙️ Scaffold CLI 📦 1.1.3",
         createProject: "◈ Criar Projeto de API",
         settings: "☰ Configurações",
         quit: "✕ Sair",
         settingsTitle: "☰ Configurações",
         language: "🌐 Idioma",
-        back: "← Voltar",
+        back: "⤶ Voltar",
         chooseLanguage: "🌐 Escolha o idioma",
         languageChanged: "Idioma alterado para:",
-        portuguese: "Português (pt-BR)",
-        english: "Inglês (en-US)",
+        portuguese: "🇧🇷 Português (pt-BR)",
+        english: "🇺🇸 Inglês (en-US)",
         projectName: "Nome do projeto:",
         chooseFramework: "Escolha o framework:",
         chooseDB: "Escolha o banco de dados:",
@@ -50,10 +51,11 @@ export const messages = {
         installingDeps: "Instalando dependências...",
         success: "Projeto criado com sucesso! Para iniciar:",
         missingNpm: "npm não está instalado!",
-        nodeVersion: "Node.js 18 ou superior necessário!",
+        nodeVersion: "Node.js 20.11 ou superior necessário!",
         yourVersion: "Sua versão do Node:",
         operationCanceled: "Operação cancelada pelo usuário",
-        templateNotFound: "Template não encontrado:"
+        templateNotFound: "Template não encontrado:",
+        byeMessage: "👋 Até logo!"
     }
 };
 
