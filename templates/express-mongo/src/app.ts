@@ -1,13 +1,30 @@
 import express from "express";
+import cors from "cors"
 import routes from "./appModule.js";
-import connectDB from "./database/index.js";
+import connectDB from "./config/database.js";
 
-const app = express();
+class AppController {
+    public app: express.Application;
 
-app.use(express.json());
+    constructor() {
+        this.app = express();
+        this.database();
+        this.middlewares();
+        this.routes();
+    }
 
-connectDB();
+    private async database(): Promise<void> {
+        await connectDB();
+    }
 
-app.use("/api", routes);
+    private middlewares(): void {
+        this.app.use(express.json());
+        this.app.use(cors());
+    }
 
-export default app;
+    private routes(): void {
+        this.app.use(routes);
+    }
+}
+
+export default new AppController().app;
