@@ -15,7 +15,7 @@ class AppController {
 
     private async database(): Promise<void> {
         try {
-            await pool.raw("SELECT 1");
+            await pool.query("SELECT 1");
             console.log("📦 Banco de dados conectado com sucesso!");
         } catch (error) {
             console.error("❌ Erro ao conectar no banco de dados:", error);
