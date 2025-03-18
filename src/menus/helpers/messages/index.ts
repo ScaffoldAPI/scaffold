@@ -2,7 +2,7 @@ import ck from "chalk";
 
 export const messages = {
     "en-US": {
-        mainMenuTitle: "⚙️ Scaffold CLI 📦 1.1.3",
+        mainMenuTitle: "⚙️ Scaffold CLI 📦 1.1.4",
         createProject: "◈ Create API Project",
         settings: "☰ Settings",
         quit: "✕ Quit",
@@ -30,7 +30,7 @@ export const messages = {
         byeMessage: "👋 Goodbye!"
     },
     "pt-BR": {
-        mainMenuTitle: "⚙️ Scaffold CLI 📦 1.1.3",
+        mainMenuTitle: "⚙️ Scaffold CLI 📦 1.1.4",
         createProject: "◈ Criar Projeto de API",
         settings: "☰ Configurações",
         quit: "✕ Sair",
