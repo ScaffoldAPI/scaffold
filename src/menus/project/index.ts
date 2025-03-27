@@ -24,6 +24,15 @@ export async function createProject(lang: "pt-BR" | "en-US") {
             },
             {
                 type: "list",
+                name: "language",
+                message: t("chooseTechnology", lang),
+                choices: [
+                    { name: `${ck.yellow("🟨 JavaScript")}`, value: "js" },
+                    { name: `${ck.blue("🟦 TypeScript")}`, value: "ts" }
+                ]
+            },
+            {
+                type: "list",
                 name: "framework",
                 message: t("chooseFramework", lang),
                 choices: [
@@ -70,7 +79,7 @@ export async function createProject(lang: "pt-BR" | "en-US") {
             }
         }
 
-        const templatePath = path.join(__dirname, "../../../templates", `${answers.framework}-${answers.database}`);
+        const templatePath = path.join(__dirname, "../../../templates", `${answers.language}-${answers.framework}-${answers.database}`);
 
         if (!fs.existsSync(templatePath)) {
             console.error(ck.red(`${t("templateNotFound", lang)} ${ck.yellow(templatePath)}`));

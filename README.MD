@@ -10,7 +10,7 @@
 
 Usage:
 ```bash
-npx scaffold@latest
+npx scaffold-api@latest
 ```
 
-- ⚠️ [NodeJs](https://nodejs.org/en) version required: 20.11 or higher
+- ⚠️ [nodejs](https://nodejs.org/en) version required: 20.11 or higher
